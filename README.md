@@ -1,1 +1,124 @@
-# levi-html
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de OS - Indústria 4.0 SENAI</title>
+</head>
+<body>
+
+     <header>
+       <h1> SENAI - Controle de manutenção Industrial</h1>
+    <nav aria-label="Navegação Principal">
+        <ul>
+            <li><a href="#dashboard">Dashboard de OS</a></li>
+             <li><a href="#nova-os">Abrir Nova OS</a></li>
+            <li><a href="#instruções">Procedimentos</a></li>
+        </ul>
+    <nav>
+     </header>
+    
+<main>
+    
+    <section id="dashboard">
+      <h2>Ordens de Serviço em aberto</h2>
+      <table border="1">
+        <caption>Lista de manutenções preventivas e corretivas da fábrica</caption>
+        <thead>
+             <th scope="col">ID</th>
+             <th scope="col">Equipamento</th>
+             <th scope="col">Setor</th>
+             <th scope="col">Data Abertura</th>
+             <th scope="col">Status</th>
+        </tr>
+        <tr>
+             <td>#1042</td>
+             <td>Torno CNC R-200</td>
+             <td>Usinagem</td> 
+             <td><time datime="2026-08-30">30/08/2026</time></td>
+             <td>Em andamento</td>
+        </tr>
+        <tr>
+            <td>#1043</td>
+             <td>Prensa Hidraulica 50T</td>
+             <td>Stamping</td> 
+             <td><time datime="2026-09-01">01/09/2026</time></td>
+             <td>Aguardando Peça</td>
+        </tr>
+        <tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total de OS Ativas:</td>
+                    <td><strong>2</strong></td>
+                </tr>
+            </tfoot>
+            <table>
+            <section>
+            
+
+
+                <section id="nova-os">
+                    <h2>Abertura de nova ordem de Serviço</h2>
+
+                    <form action="#" method="POST" enctype="multipart/form-data">
+
+                        <fieldset>
+                           <legend> Identificação do Solicitante</legend>
+
+                           <label for="Matricula">Matricula SENAI/Mecãnico</label><br>
+                           <input type="text" id="matricula" required pattern="[A-Z]{2}{0-9}{4}" placeholder="EX: SN1234"><br><br>
+
+                           <label for="email">E-mail Corporativo:</label><br>
+                           <input type="email" id="email" name="email" required placeholder="tecnico@senai.br"><br><br>
+                        </fieldset>
+
+                        <fieldset>
+    <legend>Dados da Ocorrência</legend>
+
+    <label for="equipamento">Equipamento Afetado:</label><br>
+    <input type="text" id="equipamento" name="equipamento" list="lista-equipamentos" required>
+    <datalist id="lista-equipamentos">
+        <option value="Torno CNC R-200"></option>
+        <option value="Prensa Hidráulica 50T"></option>
+        <option value="Robô Soldador ABB"></option>
+        <option value="Esteira Transportadora T-100"></option>
+    </datalist><br><br>
+
+    <label for="data-falha">Data da Ocorrência:</label><br>
+    <input type="date" id="data-falha" name="data-falha" required><br><br>
+
+    <label for="nivel-urgencia">Nível de Urgência (1 a 5):</label><br>
+    <input type="range" id="nivel-urgencia" name="nivel-urgencia" min="1" max="5" value="3"><br><br>
+
+    <label for="foto-laudo">Anexar Foto/Laudo Técnico (PDF ou Imagem):</label><br>
+    <input type="file" id="foto-laudo" name="foto-laudo" accept="image/*,.pdf"><br><br>
+
+    <label for="descricao">Descrição Detalhada do Defeito:</label><br>
+    <textarea id="descricao" name="descricao" rows="5" cols="40" required minlength="20" placeholder="Descreva o problema com no mínimo 20 caracteres..."></textarea><br><br>
+</fieldset>
+
+<button type="submit">Registrar Ordem de Serviço</button>
+<button type="reset">Limpar Formulário</button>
+</form>
+</section>
+</main>
+
+<!-- BARRA LATERAL INFORMATIVA -->
+<aside id="instrucoes">
+    <h3>Procedimentos de Segurança</h3>
+    <p>Assista ao treinamento rápido de Lockout/Tagout antes de intervir no equipamento:</p>
+
+    <figure>
+        <video controls width="280">
+            <source src="seguranca-manutencao.mp4" type="video/mp4">
+            Seu navegador não suporta a exibição de vídeos.
+        </video>
+        <figcaption>Treinamento de Segurança Obrigatório NR-12</figcaption>
+    </figure>
+</aside>
+<footer>
+    <p>&copy; 2026 Planta industrial didática SENAI. Todos dirwitos reservados.</p>
+</footer>
+
+</body>
+</html>
