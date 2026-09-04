@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas</title>
+    <style> 
+        html {
+            border: 1px solid red;
+        }
+        body {
+            border: 1px solid green;
+            text-align: right;
+        }
+        h1 {
+            border: 1px solid blue;
+            padding: 50px;  
+            margin: 1px;
+            background-color: aquamarine;    
+        }
+        span {
+            border: 1px solid purple;
+            margin: 20px;
+           
+        }
+
+        .diferente {
+            background-color: green;
+        }
+
+        .negrito {
+            font-weight: bold;
+        }
+
+        #caixinha {
+            font-size: 10px;
+            background: linear-gradient(to right, red);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Caixas</h1>
+    <h1>Caixas</h1>
+    <span class="diferente">Caixas</span>
+    <span class="diferente negrito">Caixas</span>
+    <span>Caixas</span>
+    <span>Caixas</span>
+    <span>Caixas</span>
+    <span id="caixinha">caixa</span>
+</body>
+</html>>
+      
